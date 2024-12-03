@@ -82,3 +82,30 @@ function backspace() {
     let display = document.getElementById("display");
     display.value = display.value.slice(0, -1);
 }
+
+function pi() {
+    display.value += Math.PI;
+}
+
+function e() {
+    display.value += Math.E;
+}
+
+function factorial() {
+    // Add factorial implementation
+    let n = parseInt(display.value);
+    let result = 1;
+    for(let i = 2; i <= n; i++) {
+        result *= i;
+    }
+    display.value = result;
+}
+
+function inverse() {
+    display.value = 1 / parseFloat(display.value);
+}
+
+function answer() {
+    // Implement to show the last answer
+    // You'll need to store the last result somewhere
+}
