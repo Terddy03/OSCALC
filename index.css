@@ -1,0 +1,107 @@
+/* index.css */
+
+body {
+    position: relative; /* Ensure positioning for the pseudo-element */
+    background-color: black; /* Fallback color */
+    color: white; /* Change text color for better visibility */
+    margin: 0; /* Remove default margin */
+    height: 100vh; /* Full height of the viewport */
+    display: flex; /* Use flexbox for centering content */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center content vertically */
+}
+
+body::before {
+    content: ""; /* Create a pseudo-element */
+    position: absolute; /* Position it absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-image: url('img/background.jpg'); /* Path to your image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the image */
+    opacity: 0.6; /* Set opacity */
+    z-index: 1; /* Ensure it’s below text but above the body */
+}
+header, main, footer {
+    position: relative; /* Positioning for text containers */
+    z-index: 2; /* Ensure text is above the background image */
+}
+h1 {
+    font-family: 'PT Serif Caption', serif; 
+    font-size: 80px; /* Set the font size */
+    color: #FFD700; /* Change text color to gold for better visibility */
+    margin: 20px 0; /* Add margin above and below the heading */
+    text-align: center; /* Center the heading text */
+    font-weight: bold; /* Make the text bold */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow for depth */
+}
+
+
+
+nav {
+    font-family: 'PT Serif Caption', serif; 
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    border-radius: 0; /* No rounded corners */
+    padding: 15px 30px; /* Increase padding for a bigger nav bar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    position: fixed; /* Fixed position to stay at the top */
+    width: 100%; /* Full width */
+    top: 0; /* Align to the top */
+    z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center the items */
+}
+
+nav ul li {
+    margin: 0 20px; /* Increase space between items */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Link color */
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    font-size: 18px; /* Increase font size for links */
+    padding: 10px 15px; /* Add padding to each link for a bigger clickable area */
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Change color on hover (gold) */
+}
+
+main {
+    text-align: center; /* Center the main text */
+    margin-top: 100px; /* Space below the nav */
+}
+
+footer {
+    text-align: center; /* Center the footer text */
+    margin-top: 20px; /* Space above the footer */
+}
+
+.logo-image {
+    display: block; /* Make the image a block element */
+    margin: -50px auto 10px; /* Move the logo up slightly and center it horizontally */
+    max-width: 20%; /* Limit the maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+}
+h2 {
+    margin-top: -90px; /* Add space above the h2 */
+    text-align: center; /* Center the h2 text */
+    color: white; /* Change the color if needed */
+}
+
+p {
+    margin: 20px 0; /* 20px margin above and below */
+    padding: 10px; /* Optional: adds padding inside the paragraph */
+    line-height: 1.5; /* Increases line height for better readability */
+    text-align: center; /* Optional: center-align the text */
+}

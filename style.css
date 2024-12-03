@@ -1,0 +1,184 @@
+body {
+    background-image: url('img/background.jpg'); /* Path to your image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the image */
+    font-family: 'Calculator', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    margin: 0;
+    color: white; /* Change text color for better visibility */
+}
+
+.container {
+    width: 80%; /* Set container width to a percentage for responsiveness */
+    max-width: 800px; /* Optional: Set a maximum width */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 20px; /* Add padding for better appearance */
+    margin: 0 auto; /* Center the container */
+    background-image: url('img/calcu_bg.jpg'); /* Background image */
+    background-size: cover; /* Make the image cover the entire container */
+    background-position: center; /* Center the image */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    position: relative; /* Ensure the container is positioned */
+    z-index: 1; /* Ensure the container is above the blurred background */
+}
+
+h1 {
+    text-align: center; /* Center the heading */
+}
+
+table {
+    width: 100%; /* Full width for the table */
+}
+
+input[type="button"] {
+    width: 100%; /* Keep button width responsive */
+    height: 72px; /* Set a new height for buttons (20% larger than the previous height of 60px) */
+    padding: 10px; /* Adjust padding for better appearance */
+    font-size: 18px; /* Font size for buttons */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    background-color: #e7e7e7; /* Button background color */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+input[type="button"]:hover {
+    background-color: #d4d4d4; /* Darker color on hover */
+}
+
+.display-input {
+    width: auto; /* Allow width to adjust based on content */
+    min-width: 100%; /* Ensures it takes full width initially */
+    max-width: 100%; /* Prevents it from exceeding container width */
+    padding: 14px; /* Adds padding for better appearance */
+    font-size: 24px; /* Increases font size for better visibility */
+    border: 1px solid #ccc; /* Border styling */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 10px; /* Space below the display */
+    box-sizing: border-box; /* Ensures padding and border are included in width */
+
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    input[type="button"] {
+        padding: 12px; /* Adjust button padding for smaller screens */
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .display-input {
+        font-size: 20px; /* Adjust font size for the display input */
+    }
+}
+
+@media (max-width: 480px) {
+    input[type="button"] {
+        padding: 10px; /* Further reduce button padding */
+        font-size: 14px; /* Further adjust font size */
+    }
+
+    .display-input {
+        font-size: 18px; /* Further adjust font size for the display input */
+    }
+}
+.logo {
+    position: absolute; /* Position the logo absolutely within the container */
+    top: 1.5%; /* Adjust vertical positioning as needed */
+    left: 20px; /* Space from the left edge */
+    height: auto; /* Maintain aspect ratio */
+    width: 15%; /* Set width as a percentage of the container */
+    max-width: 90px; /* Optional: Set a maximum width for larger screens */
+    z-index: 2; /* Ensure the logo is above other elements */
+    opacity: calc();
+}
+
+.notification {
+    position: fixed; /* Fixed position to stay in the viewport */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    color: white; /* Text color */
+    padding: 15px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    z-index: 1000; /* High z-index to ensure it appears above other elements */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition effects */
+    opacity: 0; /* Start as invisible */
+    transform: translateY(-20px); /* Start slightly above its final position */
+}
+
+.notification.show {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to its final position */
+}
+
+.hidden {
+    display: none; /* Hide the notification when not shown */
+}
+
+
+nav {
+    font-family: 'PT Serif Caption', serif; 
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    border-radius: 0; /* No rounded corners */
+    padding: 15px 30px; /* Increase padding for a bigger nav bar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    position: fixed; /* Fixed position to stay at the top */
+    width: 100%; /* Full width */
+    top: 0; /* Align to the top */
+    z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center the items */
+}
+
+nav ul li {
+    margin: 0 20px; /* Increase space between items */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Link color */
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    font-size: 18px; /* Increase font size for links */
+    padding: 10px 15px; /* Add padding to each link for a bigger clickable area */
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Change color on hover (gold) */
+}
+/* Main content styles */
+main {
+    text-align: center; /* Center the main text */
+    margin-top: 80px; /* Space for the fixed nav bar */
+}
+
+/* Footer styles */
+footer {
+    text-align: center; /* Center the footer text */
+    margin-top: 20px; /* Space above the footer */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+    
+    nav ul li {
+        margin: 10px 0; /* Space between items in vertical layout */
+    }
+}
